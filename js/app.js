@@ -8,10 +8,12 @@ app.config(function($routeProvider) {
 		controller: 'HomeController'
 	})
 	.when('/newGame', {
-		template: '<h1>New Game Page</h1>'
+		templateUrl: '/js/newGame/newGameTemplate.html',
+		controller: 'NewGameController'
 	})
 	.when('/joinGame', {
-		template: '<h1>Join Game Page</h1>'
+		templateUrl: '/js/joinGame/JoinGameTemplate.html',
+		controller: 'JoinGameController'
 	})
 	.otherwise({
 		redirectTo: '/'
