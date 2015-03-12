@@ -1,14 +1,12 @@
 <div>
 	<form name='newGameForm'>
-		<fieldset>
-			<legend>Are points good or bad?</legend>
-			<input type='radio' name='points' value='good' ng-model='newGame.pointsGood' required/>Good<br />
-			<input type='radio' name='points' value='bad' ng-model='newGame.pointsGood' required/>Bad<br />
-		</fieldset>
-		<fieldset>
-			<legend>What is the game ending score?</legend>
-			<input type='number' placholder='0' ng-model='newGame.endingScore' required>
-		</fieldset>
+		<legend>Are points good or bad?</legend>
+		<input type='radio' name='points' value='good' ng-model='newGame.pointsGood' required/>Good<br />
+		<input type='radio' name='points' value='bad' ng-model='newGame.pointsGood' required/>Bad<br />
+		
+		<legend>What is the game ending score?</legend>
+		<input type='number' placholder='0' ng-model='newGame.endingScore' required><br />
+		
 		<input type='text' placeholder='NAME' ng-model='newPlayer.name' required>
 		<button type='submit' ng-disabled='newGameForm.$invalid'>Start Game!</button>
 	</form>
