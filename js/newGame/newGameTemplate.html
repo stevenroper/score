@@ -8,6 +8,6 @@
 		<input type='number' placholder='0' ng-model='newGame.endingScore' required><br />
 		
 		<input type='text' placeholder='NAME' ng-model='newPlayer.name' required>
-		<button type='submit' ng-disabled='newGameForm.$invalid'>Start Game!</button>
+		<button type='submit' ng-click='createNewGame()' ng-disabled='newGameForm.$invalid'>Start Game!</button>
 	</form>
 </div>
