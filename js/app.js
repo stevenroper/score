@@ -1,4 +1,4 @@
-var app = angular.module('scoreApp', ['ngRoute']);
+var app = angular.module('scoreApp', ['ngRoute', 'firebase']);
 
 app.config(function($routeProvider) {
 
