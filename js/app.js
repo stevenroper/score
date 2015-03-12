@@ -15,6 +15,10 @@ app.config(function($routeProvider) {
 		templateUrl: '/js/joinGame/JoinGameTemplate.html',
 		controller: 'JoinGameController'
 	})
+	.when('/games/:gameId', {
+		templateUrl: '/js/activeGame/activeGameTemplate.html',
+		controller: 'ActiveGameController'
+	})
 	.otherwise({
 		redirectTo: '/'
 	});
