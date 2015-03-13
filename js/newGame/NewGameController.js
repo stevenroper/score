@@ -1,14 +1,19 @@
 var app = angular.module('scoreApp');
 
-app.controller('NewGameController', function($scope, newGameService, $firebaseArray) {
+app.controller('NewGameController', function($scope, newGameService, $firebaseArray, $firebaseObject, newPlayerService) {
 	
-	$scope.games = $firebaseArray(new Firebase('https://myscore.firebaseio.com/scoreApp/games'));
-	//create player
-	
+	$scope.games = $firebaseArray(new Firebase('https://myscore.firebaseio.com/scoreApp/games/'));
+
+	$scope.games.$loaded().then(function(data) {
+		console.log(data.$getRecord("gmytff"));
+	});
+
 	//create new game
 	$scope.createNewGame = function() {
-		newGameService.createNewGame($scope.newGame.pointsGood, $scope.newGame.endingScore);
-		
+		var gameId = newGameService.createNewGame($scope.newGame.pointsGood, $scope.newGame.endingScore);
+		//newPlayerService.createNewPlayer($scope.newPlayer.name, gameId);
 	};
+
+	//create player
 
 });

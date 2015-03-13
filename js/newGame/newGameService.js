@@ -16,14 +16,23 @@ app.service('newGameService', function($firebaseObject, $firebaseArray) {
 	};
 
 	this.createNewGame = function(pointsGood, endingScore) {
-		var currentActiveGames = $firebaseArray(new Firebase(baseFirebaseURL));
 		var newGameId = makeGameId();
-
-		currentActiveGames.$add({
+		var newGameObj = $firebaseArray(new Firebase(baseFirebaseURL + "/" + newGameId))
+		
+		newGameObj.$add({
 			pointsGood: pointsGood,
 			endingScore: endingScore,
-			gameId: newGameId
+			gameId: newGameId	
 		});
+	
+		
+		// currentActiveGames.$add({
+		// 	pointsGood: pointsGood,
+		// 	endingScore: endingScore,
+		// 	gameId: newGameId
+		// });
+
+		return newGameId;
 	};
 
 });
