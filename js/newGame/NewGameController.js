@@ -5,7 +5,7 @@ app.controller('NewGameController', function($scope, newGameService, $firebaseAr
 	$scope.games = $firebaseArray(new Firebase('https://myscore.firebaseio.com/scoreApp/games/'));
 
 	$scope.games.$loaded().then(function(data) {
-		console.log(data.$getRecord("gmytff"));
+		console.log(data.$getRecord("otmwxg"));
 	});
 
 	//create new game
