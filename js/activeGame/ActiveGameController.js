@@ -8,11 +8,4 @@ app.controller('ActiveGameController', function($scope, $routeParams, gameServic
 		gameRef.$bindTo($scope, 'game');
 	});
 	
-
-	
-
-	// gameService.getGameData($scope.gameId).then(function(game) {
-	// 	console.log(game);
-	// });
-
 });
