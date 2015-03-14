@@ -1,4 +1,7 @@
 <div>
+	<h1>Access Code: {{gameId}}</h1>
 	<h2>Players:</h2>
-	
+	<div ng-repeat='player in game.players'>
+		{{player.name}}
+	</div>
 </div>
