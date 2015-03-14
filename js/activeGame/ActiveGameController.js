@@ -1,5 +1,5 @@
 var app = angular.module('scoreApp');
 
-app.controller('ActiveGameController', function($scope) {
-	
+app.controller('ActiveGameController', function($scope, $routeParams) {
+	console.log($routeParams.gameId);
 });
