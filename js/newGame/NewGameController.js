@@ -11,7 +11,7 @@ app.controller('NewGameController', function($scope, newGameService, $firebaseAr
 	//create new game
 	$scope.createNewGame = function() {
 		var gameId = newGameService.createNewGame($scope.newGame.pointsGood, $scope.newGame.endingScore);
-		//newPlayerService.createNewPlayer($scope.newPlayer.name, gameId);
+		newPlayerService.createNewPlayer($scope.newPlayer.name, gameId);
 	};
 
 	//create player
