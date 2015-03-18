@@ -12,7 +12,7 @@ app.config(function($routeProvider) {
 		controller: 'NewGameController'
 	})
 	.when('/joinGame', {
-		templateUrl: './js/joinGame/JoinGameTemplate.html',
+		templateUrl: './js/joinGame/joinGameTemplate.html',
 		controller: 'JoinGameController'
 	})
 	.when('/games/:gameId', {
