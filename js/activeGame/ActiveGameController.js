@@ -1,15 +1,15 @@
 var app = angular.module('scoreApp');
 
-app.controller('ActiveGameController', function($scope, $routeParams, $firebaseObject, $firebaseArray, $window, activeGameService) {
+app.controller('ActiveGameController', function($scope, $routeParams, $firebaseObject, $firebaseArray, activeGameService) {
 	$scope.gameId = $routeParams.gameId;
-	var gameRef = $firebaseObject(new Firebase('https://myscore.firebaseio.com/scoreApp/games/' + $scope.gameId));
+	var gameRef = $firebaseArray(new Firebase('https://myscore.firebaseio.com/scoreApp/games/' + $scope.gameId));
 
 	gameRef.$loaded().then(function(game) {
-		gameRef.$bindTo($scope, 'game');
+		$scope.game = gameRef.$getRecord('players');
+		//console.log(gameRef);
 	});
 	
 	$scope.updateScore = function() {
-		//var newScore = $window.prompt('What is your new score?');
 		activeGameService.updateScore($scope.newScore);
 		$scope.newScore = '';
 	};

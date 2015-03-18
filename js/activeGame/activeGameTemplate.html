@@ -1,9 +1,14 @@
 <div>
 	<h1>Access Code: {{gameId}}</h1>
 	<h2>Players:</h2>
-	<div ng-repeat='player in game.players'>
-		{{player.name}}: {{player.score}}
+	<div>
+		<ol>
+			<li ng-repeat="player in game">
+				{{player.name}}: {{player.score}}
+			</li>
+		</ol>
 	</div>
+
 	<button type="button" class="btn" data-toggle="modal" data-target=".bs-example-modal-sm">Update Score</button>
 
 	<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
