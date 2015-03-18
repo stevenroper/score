@@ -4,7 +4,19 @@
 	<div ng-repeat='player in game.players'>
 		{{player.name}}: {{player.score}}
 	</div>
-	<button ng-click='updateScore()'>Update Scores</button>
+	<button type="button" class="btn" data-toggle="modal" data-target=".bs-example-modal-sm">Update Score</button>
 
-	
+	<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-sm">
+	    <div class="modal-content">
+	      <div class='modal-body'>
+	      	<input type='number' placeholder='NEW SCORE' ng-model='newScore'>
+	      </div>
+	      <div class='modal-footer'>
+	      	<button ng-click='updateScore()' data-dismiss="modal">Submit</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
 </div>

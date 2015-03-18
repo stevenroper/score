@@ -9,8 +9,9 @@ app.controller('ActiveGameController', function($scope, $routeParams, $firebaseO
 	});
 	
 	$scope.updateScore = function() {
-		var newScore = $window.prompt('What is your new score?');
-		activeGameService.updateScore(newScore);
+		//var newScore = $window.prompt('What is your new score?');
+		activeGameService.updateScore($scope.newScore);
+		$scope.newScore = '';
 	};
 
 });
