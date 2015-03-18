@@ -1,6 +1,6 @@
 var app = angular.module('scoreApp');
 
-app.service('newPlayerService', function() {
+app.service('newPlayerService', function($window) {
 
 	this.createNewPlayer = function(playerName, gameId) {
 		var gameRef = new Firebase('https://myscore.firebaseio.com/scoreApp/games/' + gameId);
@@ -10,6 +10,8 @@ app.service('newPlayerService', function() {
 			name: playerName,
 			score: 0
 		});
+
+		$window.sessionStorage.setItem('playerId', newPlayerRef);
 	};
 
 });
