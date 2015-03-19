@@ -15,7 +15,9 @@
 	  <div class="modal-dialog modal-sm">
 	    <div class="modal-content">
 	      <div class='modal-body'>
-	      	<input type='number' placeholder='NEW SCORE' ng-model='newScore'>
+	      	<input type='number' placeholder='NEW SCORE' ng-model='newPoints'><br />
+	      	<input type='radio' name='calc' value='add' ng-model='calcFunc'>+
+	      	<input type='radio' name='calc' value='minus' ng-model='calcFunc'>-<br />
 	      </div>
 	      <div class='modal-footer'>
 	      	<button ng-click='updateScore()' data-dismiss="modal">Submit</button>
