@@ -1,4 +1,4 @@
 #Score!
-###A cross browser score keeper
+###A multi user score keeper
 
-A group score keeper that can be used on any device. Create a game, have friends join and then everyone keeps track of their own score. Inspired by Evan Brumey's [Spyfall app](http://spyfall.meteor.com).
+A group score keeper that can be used on any device in any browser. Create a game, have friends join and then everyone keeps track of their own score. Inspired by Evan Brumey's [Spyfall app](http://spyfall.meteor.com).
