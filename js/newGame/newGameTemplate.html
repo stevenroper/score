@@ -1,9 +1,9 @@
 <div>
-	<h1>New Game</h1>
+	<h1 class='page-title'>NEW GAME</h1>
 	<form name='newGameForm'>
 		<legend>Are points good or bad?</legend>
-		<input type='radio' name='points' value='good' ng-model='newGame.pointsGood' required/>Good<br />
-		<input type='radio' name='points' value='bad' ng-model='newGame.pointsGood' required/>Bad<br />
+		<input type='radio' name='points' value='true' ng-model='newGame.pointsGood' required/>Good<br />
+		<input type='radio' name='points' value='false' ng-model='newGame.pointsGood' required/>Bad<br />
 		
 		<legend>What is the game ending score?</legend>
 		<input type='number' placholder='0' ng-model='newGame.endingScore' required><br />
