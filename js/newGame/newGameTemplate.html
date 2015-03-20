@@ -13,9 +13,9 @@
 			</div>
 		</div>
 		
-		<input class='input-field' type='number' placeholder='ENDING SCORE' ng-model='newGame.endingScore' required><br />
+		<input class='input-field' type='number' placeholder='Enter ending score' ng-model='newGame.endingScore' required><br />
 		
-		<input class='input-field' type='text' placeholder='NAME' ng-model='newPlayer.name' required>
+		<input class='input-field' type='text' placeholder='Enter your name' ng-model='newPlayer.name' required>
 		<button class='btn big btn-block' type='submit' ng-click='createNewGame()' ng-disabled='newGameForm.$invalid'>Start Game!</button>
 	</form>
 </div>

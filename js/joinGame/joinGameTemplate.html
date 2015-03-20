@@ -1,8 +1,8 @@
 <div>
-	<h1>Join Game</h1>
+	<h1 class='page-title'>JOIN GAME</h1>
 	<form name='joinGameForm'>
-		<input type='text' placeholder='Enter access code' ng-model='joinGameForm.accessCode' required>
-		<input type='text' placeholder='Enter your name' ng-model='joinGameForm.name' required>
-		<button type='submit' ng-disabled='joinGameForm.$invalid' ng-click='joinGame()'>Join Game!</button>
+		<input class='input-field' type='text' placeholder='Enter access code' ng-model='joinGameForm.accessCode' required>
+		<input class='input-field' type='text' placeholder='Enter your name' ng-model='joinGameForm.name' required>
+		<button class='btn big btn-block' type='submit' ng-disabled='joinGameForm.$invalid' ng-click='joinGame()'>Join Game!</button>
 	</form>
 </div>
