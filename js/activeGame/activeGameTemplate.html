@@ -6,7 +6,7 @@
 	
 	<div class='players-container'>
 		<h3 class='page-title'>Players</h3>
-		<div class='player-card' ng-repeat='player in game'>
+		<div class='player-card' ng-repeat='player in players | orderBy:"score":order'>
 			<div class='player-card-info'>
 				{{$index+1}}. {{player.name}}
 				<span class='card__score'>{{player.score}}</span>
@@ -21,12 +21,25 @@
 	  <div class="modal-dialog modal-sm">
 	    <div class="modal-content">
 	      <div class='modal-body'>
-	      	<input type='number' placeholder='NEW SCORE' ng-model='newPoints'><br />
+	      	<input class='input-field' type='number' placeholder='NEW SCORE' ng-model='newPoints'><br />
 	      	<input type='radio' name='calc' value='add' ng-model='calcFunc'>+
 	      	<input type='radio' name='calc' value='minus' ng-model='calcFunc'>-<br />
+	      	
+	      	<!-- <div class='btn-container'>
+						<div class="btn-group" data-toggle="buttons">
+						  <label class="btn btn-primary active">
+						    <input type="radio" name="calc" autocomplete="off" value='add' ng-model='calcFunc' required checked>+
+						  </label>
+						  <label class="btn btn-primary">
+						    <input type="radio" name="calc" value='minus' ng-model='calcFunc' required autocomplete="off">-
+						  </label>
+						</div>
+					</div> -->
+
+
 	      </div>
 	      <div class='modal-footer'>
-	      	<button ng-click='updateScore()' data-dismiss="modal">Submit</button>
+	      	<button class='btn big btn-block' ng-click='updateScore()' data-dismiss="modal">Submit</button>
 	      </div>
 	    </div>
 	  </div>
