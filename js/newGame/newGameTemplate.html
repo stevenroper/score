@@ -1,18 +1,15 @@
 <div>
 	<h1 class='page-title'>NEW GAME</h1>
 	<form name='newGameForm'>
-		<h3>Points are...</h3>
-		<div class='btn-container'>
-			<div class="btn-group" data-toggle="buttons">
-			  <label class="btn btn-primary active">
-			    <input type="radio" name="points" autocomplete="off" value='true' ng-model='newGame.pointsGood' required checked>Good
-			  </label>
-			  <label class="btn btn-primary">
-			    <input type="radio" name="points" value='false' ng-model='newGame.pointsGood' required autocomplete="off">Bad
-			  </label>
-			</div>
-		</div>
 		
+		<h3>Points are...</h3>
+		<div class='radio-btn-container'>
+			<input type='radio' name='points' value='true' id='left-button' ng-model='newGame.pointsGood'>
+				<label for='left-button'>Good</label>
+			<input type='radio' name='points' value='false' id='right-button' ng-model='newGame.pointsGood'>
+				<label for='right-button'>Bad</label>
+		</div>
+
 		<input class='input-field' type='number' placeholder='Enter ending score' ng-model='newGame.endingScore' required><br />
 		
 		<input class='input-field' type='text' placeholder='Enter your name' ng-model='newPlayer.name' required>
