@@ -22,20 +22,12 @@
 	    <div class="modal-content">
 	      <div class='modal-body'>
 	      	<input class='input-field' type='number' placeholder='NEW SCORE' ng-model='newPoints'><br />
-	      	<input type='radio' name='calc' value='add' ng-model='calcFunc'>+
-	      	<input type='radio' name='calc' value='minus' ng-model='calcFunc'>-<br />
-	      	
-	      	<!-- <div class='btn-container'>
-						<div class="btn-group" data-toggle="buttons">
-						  <label class="btn btn-primary active">
-						    <input type="radio" name="calc" autocomplete="off" value='add' ng-model='calcFunc' required checked>+
-						  </label>
-						  <label class="btn btn-primary">
-						    <input type="radio" name="calc" value='minus' ng-model='calcFunc' required autocomplete="off">-
-						  </label>
-						</div>
-					</div> -->
-
+      		
+      		<input type='radio' name='calc' value='add' id='add-button' ng-model='calcFunc'>
+      		<label for='add-button'>+</label>
+      		<input type='radio' name='calc' value='minus' id='minus-button' ng-model='calcFunc'>
+      		<label for='minus-button'>-</label>
+					{{calcFunc}}
 
 	      </div>
 	      <div class='modal-footer'>

@@ -6,6 +6,7 @@ app.controller('ActiveGameController', function($scope, $routeParams, $firebaseO
 	var players = $firebaseArray(new Firebase('https://myscore.firebaseio.com/scoreApp/games/' + $scope.gameId + "/players"));
 	
 	$scope.calcFunc = 'add';
+	$scope.buttons = 'option 1';
 
 	pointsGoodRef.on('value', function(snapshot) {
 		if(snapshot.val() === 'true') {
