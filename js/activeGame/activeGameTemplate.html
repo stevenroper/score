@@ -21,17 +21,18 @@
 	  <div class="modal-dialog modal-sm">
 	    <div class="modal-content">
 	      <div class='modal-body'>
-	      	<input class='input-field' type='number' placeholder='NEW SCORE' ng-model='newPoints'><br />
+	      	<input class='input-field' type='number' placeholder='NEW POINTS' ng-model='newPoints' style='margin-top: 0'><br />
       		
-      		<input type='radio' name='calc' value='add' id='add-button' ng-model='calcFunc'>
-      		<label for='add-button'>+</label>
-      		<input type='radio' name='calc' value='minus' id='minus-button' ng-model='calcFunc'>
-      		<label for='minus-button'>-</label>
-					{{calcFunc}}
+      		<div class='radio-btn-container'>
+      			<input type='radio' name='calc' value='add' id='left-button' ng-model='calcFunc'>
+	      			<label for='left-button'>Add</label>
+	      		<input type='radio' name='calc' value='minus' id='right-button' ng-model='calcFunc'>
+	      			<label for='right-button'>Minus</label>
+      		</div>
 
 	      </div>
 	      <div class='modal-footer'>
-	      	<button class='btn big btn-block' ng-click='updateScore()' data-dismiss="modal">Submit</button>
+	      	<button class='btn big btn-block' ng-click='updateScore()' data-dismiss="modal">Update</button>
 	      </div>
 	    </div>
 	  </div>

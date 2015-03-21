@@ -56,6 +56,36 @@
 	width: 100%;
 }
 
+.radio-btn-container {
+	width: 100%;
+	margin-top: 15px; 
+	box-sizing: border-box;
+}
+
+input[type=radio] {
+	display: none;
+}
+
+input[type=radio] + label {
+  width: 50%;
+  display:inline-block;
+  padding: 15px 0;
+  background: #fff;
+	color: #000;
+  font-size: 20px;
+  border: 1px solid #8C8C8C;
+  text-align: center;
+}
+
+input[type=radio]:checked + label { 
+  background: #8C8C8C;
+	color: #fff;
+}
+
+#right-button + label {
+	float: right;
+}
+
 .input-field {
 	width: 100%;
 	padding: 15px 0 15px 10px;
@@ -107,7 +137,9 @@
 	margin-right: 10px;
 }
 
-
+.modal-content {
+	border-radius: 0;
+}
 
 
 
