@@ -79,13 +79,33 @@
 	width: 100%;
 }
 
-#player-card li {
+.player-card {
 	border: 1px solid #8C8C8C;
+	height: 45px;
+	margin: 5px 0;
+	box-sizing: border-box;
 }
 
+.player-card-info {
+	margin-left: 10px;
+	font-size: 20px;
+	position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 
+}
 
+.card__score {
+	float: right;
+	margin-right: 10px;
+}
 
+.card__delete {
+	float: right;
+	margin-right: 10px;
+}
 
 
 

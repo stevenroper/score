@@ -6,11 +6,13 @@
 	
 	<div class='players-container'>
 		<h3 class='page-title'>Players</h3>
-		<ol id='player-card'>
-			<li ng-repeat="player in game">
-				{{$index+1}}{{player.name}}: {{player.score}}
-			</li>
-		</ol>
+		<div class='player-card' ng-repeat='player in game'>
+			<div class='player-card-info'>
+				{{$index+1}}. {{player.name}}
+				<span class='card__score'>{{player.score}}</span>
+				<!-- <span class='card__delete'>X</span> -->
+			</div>
+		</div>
 	</div>
 
 	<button type="button" class="btn big btn-block" data-toggle="modal" data-target=".bs-example-modal-sm">Update Score</button>
