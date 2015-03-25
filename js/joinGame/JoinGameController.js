@@ -8,7 +8,10 @@ app.controller('JoinGameController', function($scope, joinGameService, $location
 				joinGameService.addPlayer($scope.joinGameForm.accessCode, $scope.joinGameForm.name);
 				$location.path('/games/' + $scope.joinGameForm.accessCode);
 			} else {
-				$('.error').fadeIn(500).fadeOut(5000);
+				$('.error').slideDown(1000);
+				setTimeout(function() {
+					$('.error').slideUp(1000);
+				}, 5000);
 			}	
 		});
 	};
