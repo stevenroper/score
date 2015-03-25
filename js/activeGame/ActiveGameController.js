@@ -22,7 +22,14 @@ app.controller('ActiveGameController', function($scope, $routeParams, $firebaseO
 	});
 
 	$scope.updateScore = function() {
-		activeGameService.updateScore($scope.newPoints, $scope.calcFunc);
+
+		//Check to see if newPoints field is blank
+		if(!$scope.newPoints) {
+			activeGameService.updateScore(0, $scope.calcFunc);
+		} else {
+			activeGameService.updateScore($scope.newPoints, $scope.calcFunc);
+		}
+
 		$scope.newPoints = '';
 		$scope.calcFunc = 'add';
 	};
