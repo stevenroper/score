@@ -3,7 +3,7 @@ var app = angular.module('scoreApp');
 app.service('activeGameService', function($window) {
 
 	this.updateScore = function(newPoints, calcFunc) {
-		var playerRef = new Firebase($window.sessionStorage.getItem('playerId'));
+		var playerRef = new Firebase($window.localStorage.getItem('playerId'));
 		var newScore = 0;
 
 		playerRef.once('value', function(dataSnapshot) {

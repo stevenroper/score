@@ -11,7 +11,7 @@ app.service('newPlayerService', function($window) {
 			score: 0
 		});
 
-		$window.sessionStorage.setItem('playerId', newPlayerRef);
+		$window.localStorage.setItem('playerId', newPlayerRef);
 
 	};
 
