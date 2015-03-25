@@ -3,6 +3,7 @@
 	<form name='joinGameForm'>
 		<input class='input-field' type='text' placeholder='Enter access code' ng-model='joinGameForm.accessCode' required>
 		<input class='input-field' type='text' placeholder='Enter your name' ng-model='joinGameForm.name' required>
+		<div class='error'>Cannot find game. Please try again.</div>
 		<button class='btn big btn-block' type='submit' ng-disabled='joinGameForm.$invalid' ng-click='joinGame()'>Join Game!</button>
 	</form>
 </div>

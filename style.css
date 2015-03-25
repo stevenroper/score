@@ -37,6 +37,14 @@
 	border: 1px solid #8C8C8C;
 }
 
+.error {
+	display: none;
+	margin-top: 15px;
+	border: 1px solid #ff0000;
+	text-align: center;
+	color: #ff0000;
+}
+
 .btn.btn-primary {
 	width: 50%;
 	padding: 15px 0;
