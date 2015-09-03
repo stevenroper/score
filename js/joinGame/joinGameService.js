@@ -13,7 +13,7 @@ app.service('joinGameService', function($firebaseArray, $q, newPlayerService) {
 				deferred.resolve(false);
 			}
 		}, function(error) {
-			deferred.refect(error);
+			deferred.reject(error);
 		});
 
 		return deferred.promise;
